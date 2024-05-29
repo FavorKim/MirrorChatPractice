@@ -1,4 +1,5 @@
 using Mirror;
+using Org.BouncyCastle.Asn1.Crmf;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -33,6 +34,7 @@ public class LoginPopup : MonoBehaviour
     private void Awake()
     {
         SetDefaultNetworkAddress();
+        Text_Error.gameObject.SetActive(false);
     }
 
     private void Start()
@@ -133,6 +135,14 @@ public class LoginPopup : MonoBehaviour
 
     public void OnValueChanged_ToggleBtn(string userName)
     {
+        bool isUserNameValid = !string.IsNullOrWhiteSpace(userName);
+        Btn_StartAsHostServer.interactable = isUserNameValid;
+        Btn_StartAsClient.interactable = isUserNameValid;
+    }
 
+    public void SetUIOnAuthError(string msg)
+    {
+        Text_Error.text = msg;
+        Text_Error.gameObject.SetActive(true);
     }
 }
