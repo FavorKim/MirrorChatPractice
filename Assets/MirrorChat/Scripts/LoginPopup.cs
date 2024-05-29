@@ -61,6 +61,8 @@ public class LoginPopup : MonoBehaviour
     }
 
 
+    public string GetUserName() { return  Input_UserName.text; }
+
     private void SetDefaultNetworkAddress()
     {
         // IsNullOrWhiteSpace / IsNullOrEmpty는 문자열의 널체크
@@ -110,7 +112,8 @@ public class LoginPopup : MonoBehaviour
 
     public void SetUIOnAuthValueChanged()
     {
-        // [TODO]
+        Text_Error.text = string.Empty;
+        Text_Error.gameObject.SetActive(false);
     }
 
     public void OnClick_StartAsHostServer()

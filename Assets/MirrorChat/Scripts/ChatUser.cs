@@ -17,7 +17,7 @@ public class ChatUser : NetworkBehaviour
     // 많은 클라이언트 중, 로컬 플레이어만 호출 (나한테만)
     public override void OnStartLocalPlayer()
     {
-        var objChatUI = GameObject.Find("ChattingUI");
+        var objChatUI = GameObject.FindAnyObjectByType<ChattingUI>();
         if (objChatUI != null)
         {
             var chattingUI = objChatUI.GetComponent<ChattingUI>();

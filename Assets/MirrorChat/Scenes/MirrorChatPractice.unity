@@ -620,10 +620,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 145505510289540556, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 145505510460213914, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -642,7 +638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 145505510567460121, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000017513328
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 145505511586517048, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
       propertyPath: m_AnchorMax.y
@@ -676,6 +672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1624887577}
     - target: {fileID: 5216855563584506274, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
       propertyPath: m_Name
       value: LoginPopUp
@@ -781,64 +781,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd653c2b712da7447a4b9a8cfec908f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &7234367249082331393
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7234367249091647768, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_Name
-      value: ChatUser
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 865.1216
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 603.1853
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.9168707
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647770, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234367249091647771, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
-      propertyPath: sceneId
-      value: 4248795577
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}

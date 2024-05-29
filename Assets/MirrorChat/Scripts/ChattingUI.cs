@@ -46,8 +46,8 @@ public class ChattingUI : NetworkBehaviour
         Text_ChatHistory.text = string.Empty;
     }
 
-    [Command(requiresAuthority = false)] // Command : 클라이언트가 서버의 기능을 호출
     // 서버야. 메시지 보내줘
+    [Command(requiresAuthority = false)] // Command : 클라이언트가 서버의 기능을 호출
     void Command_SendMsg(string msg, NetworkConnectionToClient sender = null)
     {
         if (!_connectedNameDict.ContainsKey(sender))    // 없으면 넣겠다
@@ -61,12 +61,12 @@ public class ChattingUI : NetworkBehaviour
         if (!string.IsNullOrWhiteSpace(msg))
         {
             string senderName = _connectedNameDict[sender];
-            // [TODO] OnRecvMessage(senderName, msg.Trim());
+            OnRecvMessage(senderName, msg.Trim());
         }
     }
 
-    [ClientRpc]
     // 서버가 Rpc를 호출하면 우리는 메시지를 받을게.
+    [ClientRpc]
     void OnRecvMessage(string senderName, string msg)
     {
         string formatedMsg = (senderName == _localPlayerName) ?
@@ -90,7 +90,8 @@ public class ChattingUI : NetworkBehaviour
 
     IEnumerator CorAppendAndScroll(string msg)
     {
-        Text_ChatHistory.text += msg + '\n';
+        //Text_ChatHistory.text += msg + '\n';
+        Text_ChatHistory.text += $"{msg} \n";
         
         yield return null;
         yield return null;
@@ -98,18 +99,22 @@ public class ChattingUI : NetworkBehaviour
         ScrollBar_Chat.value = 0;
     }
     //==================================================
-    private void SendMsg()
+    //private void SendMsg()
+    //{
+    //    string currentChatMsg = Input_Message.text;
+    //    if (!string.IsNullOrWhiteSpace(currentChatMsg))
+    //    {
+    //        Command_SendMsg(currentChatMsg.Trim());
+    //    }
+    //}
+    // 굳이 빼는 이유 : OnClick이라는 명명규칙을 위반하게 되기 때문에
+    public void OnClick_SendMessage()
     {
         string currentChatMsg = Input_Message.text;
         if (!string.IsNullOrWhiteSpace(currentChatMsg))
         {
             Command_SendMsg(currentChatMsg.Trim());
         }
-    }
-    // 굳이 빼는 이유 : OnClick이라는 명명규칙을 위반하게 되기 때문에
-    public void OnClick_SendMessage()
-    {
-        SendMsg();
     }
 
     public void OnClick_Exit()
@@ -130,7 +135,7 @@ public class ChattingUI : NetworkBehaviour
            Input.GetButtonDown("Submit"))
         {
             // 굳이 빼는 이유 : OnClick이라는 명명규칙을 위반하게 되기 때문에
-            SendMsg();
+            OnClick_SendMessage();
         }
     }
 }
