@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ChattingUI : NetworkBehaviour
 {
     [SerializeField] private TMP_InputField Input_Message;
-    [SerializeField] private TMP_Text Text_ChatHistory;
+    [SerializeField] private Text Text_ChatHistory;
 
     [SerializeField] private Scrollbar ScrollBar_Chat;
 

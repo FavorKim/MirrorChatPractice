@@ -15,6 +15,7 @@ MonoBehaviour:
   sceneDatas_byGuid:
     keys:
     - 9fc0d4010bbf28b4594072e72b8655ab
+    - ed58a00797426a14789a07f652cb7c02
     values:
     - goDatas_byGlobalId:
         keys:
@@ -47,6 +48,8 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2633293257133156350-5216855564031089521
         - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1624887574-0
         - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-145505509968612803-145505509843413693
+        - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-145505511586517049-145505509843413693
+        - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-145505510471490354-145505509843413693
         values:
         - colorIndex: 5
           iconNameOrGuid: Folder Icon
@@ -106,3 +109,34 @@ MonoBehaviour:
           iconNameOrGuid: Settings Icon
         - colorIndex: 6
           iconNameOrGuid: Canvas Icon
+        - colorIndex: 4
+          iconNameOrGuid: 
+        - colorIndex: 1
+          iconNameOrGuid: 
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-2545168470770288404-2402302343620740714
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-145505511527718637-0
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-145505511716533361-0
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-145505509799878720-0
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-145505510286489803-0
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-145505511438369675-0
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-145505510471490354-0
+        - globalObjectIdString: GlobalObjectId_V1-1-ed58a00797426a14789a07f652cb7c02-2545168470091476935-2402302343620740714
+        values:
+        - colorIndex: 3
+          iconNameOrGuid: 
+        - colorIndex: 0
+          iconNameOrGuid: Folder Icon
+        - colorIndex: 0
+          iconNameOrGuid: Folder Icon
+        - colorIndex: 4
+          iconNameOrGuid: BoxCollider Icon
+        - colorIndex: 4
+          iconNameOrGuid: BoxCollider Icon
+        - colorIndex: 4
+          iconNameOrGuid: 
+        - colorIndex: 4
+          iconNameOrGuid: 
+        - colorIndex: 4
+          iconNameOrGuid: 
