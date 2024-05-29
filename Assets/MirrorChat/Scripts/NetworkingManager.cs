@@ -19,7 +19,7 @@ public class NetworkingManager : NetworkManager
 
         if(_chattingUI != null)
         {
-            // [TODO] chattingUI 에서 어떤 기능 부를 것 _chattingUI.
+            _chattingUI.RemoveNameOnServerDisconnected(conn);
         }
         base.OnServerDisconnect(conn);
     }

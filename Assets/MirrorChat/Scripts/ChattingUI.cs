@@ -47,13 +47,15 @@ public class ChattingUI : NetworkBehaviour
     }
 
     [Command(requiresAuthority = false)] // Command : 클라이언트가 서버의 기능을 호출
-
     // 서버야. 메시지 보내줘
     void Command_SendMsg(string msg, NetworkConnectionToClient sender = null)
     {
         if (!_connectedNameDict.ContainsKey(sender))    // 없으면 넣겠다
         {
-            // [TODO] var player = sender.identity.GetComponent<ChatUser>();
+            var player = sender.identity.GetComponent<ChatUser>();
+            var playerName = player.PlayerName;
+            _connectedNameDict.Add(sender, playerName);
+
         }
 
         if (!string.IsNullOrWhiteSpace(msg))
@@ -75,6 +77,10 @@ public class ChattingUI : NetworkBehaviour
     }
 
 
+    public void RemoveNameOnServerDisconnected(NetworkConnectionToClient conn)
+    {
+        _connectedNameDict.Remove(conn);
+    }
 
     //========================UI==========================
     void AppendMsg(string msg)

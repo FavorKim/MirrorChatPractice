@@ -6,7 +6,7 @@ public class ChatUser : NetworkBehaviour
     // SyncVar : 서버 변수를 모든 클라에 자동으로 동기화
     // 클라가 직접 접근하지 않고 서버에서 변경해야하는 녀석에게 붙이는 Attribute
     [SyncVar]
-    public string PlayerName;
+    public string PlayerName;   // 플레이어 네임은 모든 클라이언트가 알아야 하므로 모든 클라에 동기화. (실명제)
 
     // 호스트 혹은 서버에서만 호출됨. Like Start(), but only called on server and host
     public override void OnStartServer()
@@ -23,7 +23,7 @@ public class ChatUser : NetworkBehaviour
             var chattingUI = objChatUI.GetComponent<ChattingUI>();
             if(chattingUI != null)
             {
-                
+                chattingUI.SetLocalPlayerName(PlayerName);
             }
 
         }
