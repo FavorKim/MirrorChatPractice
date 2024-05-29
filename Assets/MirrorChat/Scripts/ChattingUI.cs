@@ -91,7 +91,6 @@ public class ChattingUI : NetworkBehaviour
     {
         //Text_ChatHistory.text += msg + '\n';
         Text_ChatHistory.text += $"{msg} \n";
-        
         yield return null;
         yield return null;
 
@@ -112,6 +111,7 @@ public class ChattingUI : NetworkBehaviour
         string currentChatMsg = Input_Message.text;
         if (!string.IsNullOrWhiteSpace(currentChatMsg))
         {
+            Input_Message.text = string.Empty;
             Command_SendMsg(currentChatMsg.Trim());
         }
     }
