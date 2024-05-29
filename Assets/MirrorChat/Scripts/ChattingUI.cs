@@ -91,29 +91,40 @@ public class ChattingUI : NetworkBehaviour
 
         ScrollBar_Chat.value = 0;
     }
-
-
-    public void OnClick_SendMessage()
+    //==================================================
+    private void SendMsg()
     {
         string currentChatMsg = Input_Message.text;
         if (!string.IsNullOrWhiteSpace(currentChatMsg))
         {
-
+            Command_SendMsg(currentChatMsg.Trim());
         }
+    }
+    // 굳이 빼는 이유 : OnClick이라는 명명규칙을 위반하게 되기 때문에
+    public void OnClick_SendMessage()
+    {
+        SendMsg();
     }
 
     public void OnClick_Exit()
     {
-
+        NetworkManager.singleton.StopHost();
+        this.gameObject.SetActive(false);
     }
 
     public void OnValueChanged_ToggleBtn(string val)
     {
-
+        Btn_SendMessage.interactable = !string.IsNullOrEmpty(val);
     }
 
     public void OnEndEdit_Sending()
     {
-
+        if (Input.GetKeyDown(KeyCode.Return) ||
+           Input.GetKeyDown(KeyCode.KeypadEnter) ||
+           Input.GetButtonDown("Submit"))
+        {
+            // 굳이 빼는 이유 : OnClick이라는 명명규칙을 위반하게 되기 때문에
+            SendMsg();
+        }
     }
 }
