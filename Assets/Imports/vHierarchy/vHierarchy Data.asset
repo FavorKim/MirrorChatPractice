@@ -45,6 +45,8 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-5216855562986233446-5216855564031089521
         - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-8226425720335364485-5216855564031089521
         - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2633293257133156350-5216855564031089521
+        - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1624887574-0
+        - globalObjectIdString: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-145505509968612803-145505509843413693
         values:
         - colorIndex: 5
           iconNameOrGuid: Folder Icon
@@ -100,3 +102,7 @@ MonoBehaviour:
           iconNameOrGuid: PreMatCube
         - colorIndex: 0
           iconNameOrGuid: PreMatCube
+        - colorIndex: 7
+          iconNameOrGuid: Settings Icon
+        - colorIndex: 6
+          iconNameOrGuid: Canvas Icon
