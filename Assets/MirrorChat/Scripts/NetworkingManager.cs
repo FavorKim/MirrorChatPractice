@@ -29,6 +29,8 @@ public class NetworkingManager : NetworkManager
         base.OnClientDisconnect();
         if(_loginPopup != null)
         {
+            // 다른 클래스에서 직접 다른 클래스의 메서드를 호출하는 형식은 보안에 취약.
+            _loginPopup.SetUIOnClientDisconnected();
             // [TODO] loginPopup 에서 어떤 기능 부를 것 _chattingUI.
         }
     }
