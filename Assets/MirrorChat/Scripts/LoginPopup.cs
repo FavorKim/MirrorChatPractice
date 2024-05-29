@@ -39,20 +39,20 @@ public class LoginPopup : MonoBehaviour
         Btn_StartAsClient.interactable = false;
     }
 
-    private void Start()
-    {
+    //private void Start()
+    //{
         
-    }
+    //}
 
-    private void OnEnable()
-    {
+    //private void OnEnable()
+    //{
         
-    }
+    //}
 
-    private void OnDisable()
-    {
+    //private void OnDisable()
+    //{
         
-    }
+    //}
 
     private void Update()
     {

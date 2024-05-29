@@ -76,7 +76,6 @@ public class ChattingUI : NetworkBehaviour
         AppendMsg(formatedMsg);
     }
 
-
     public void RemoveNameOnServerDisconnected(NetworkConnectionToClient conn)
     {
         _connectedNameDict.Remove(conn);
