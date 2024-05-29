@@ -644,7 +644,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &5216855563584506276
 MonoBehaviour:
@@ -703,6 +703,7 @@ MonoBehaviour:
   Btn_StartAsHostServer: {fileID: 7279289377375738856}
   Btn_StartAsClient: {fileID: 3721186910390111635}
   Text_Error: {fileID: 5216855562986233448}
+  _netManager: {fileID: 0}
 --- !u!1 &5216855563663867208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1513,34 @@ PrefabInstance:
     - target: {fileID: 4670815746817800144, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
       propertyPath: m_Name
       value: Input_UserName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670815746817800150, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670815746817800150, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670815746817800150, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8203017550377328338}
+    - target: {fileID: 4670815746817800150, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670815746817800150, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnValueChanged_ToggleBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670815746817800150, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoginPopup, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670815746817800150, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4670815747546122900, guid: c23454e86ae357b45ac4a7e4dd4704b1, type: 3}
       propertyPath: m_Name

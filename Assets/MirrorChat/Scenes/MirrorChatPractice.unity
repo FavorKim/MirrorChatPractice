@@ -379,6 +379,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1624887575}
   - component: {fileID: 1624887576}
+  - component: {fileID: 1624887577}
+  - component: {fileID: 1624887578}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -427,8 +429,8 @@ MonoBehaviour:
   maxConnections: 100
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 0}
+  authenticator: {fileID: 1624887577}
+  playerPrefab: {fileID: 7234367249091647768, guid: c7e82743e7749a74c8161e17a2fe6dbb, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs:
@@ -450,6 +452,55 @@ MonoBehaviour:
   timeInterpolationGui: 0
   _loginPopup: {fileID: 5216855564031089522}
   _chattingUI: {fileID: 145505509843413694}
+--- !u!114 &1624887577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624887574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1ad93b4f9c25a43bb21f45bd52b5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnServerAuthenticated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientAuthenticated:
+    m_PersistentCalls:
+      m_Calls: []
+  _playerName: 
+  _loginPopup: {fileID: 5216855564031089522}
+--- !u!114 &1624887578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624887574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 7777
+  DualMode: 1
+  NoDelay: 1
+  Interval: 10
+  Timeout: 10000
+  RecvBufferSize: 7361536
+  SendBufferSize: 7361536
+  FastResend: 2
+  ReceiveWindowSize: 4096
+  SendWindowSize: 4096
+  MaxRetransmit: 40
+  MaximizeSocketBuffers: 1
+  ReliableMaxMessageSize: 297433
+  UnreliableMaxMessageSize: 1194
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
 --- !u!1001 &145505509843413693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -569,6 +620,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 145505510289540556, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 145505510460213914, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -585,13 +640,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 145505510471490354, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 145505510567460121, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00018282906
+      value: -0.000017513328
       objectReference: {fileID: 0}
     - target: {fileID: 145505511586517048, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
       propertyPath: m_AnchorMax.y
@@ -601,9 +652,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 145505511586517049, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 1112627132877085326, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
+      propertyPath: sceneId
+      value: 1410117778
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed58a00797426a14789a07f652cb7c02, type: 3}
@@ -625,34 +676,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5216855564031089522}
-    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnValueChanged_ToggleBtn
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LoginPopup, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5216855562980491116, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5216855563584506274, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
       propertyPath: m_Name
       value: LoginPopUp
@@ -741,10 +764,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5216855564122881644, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
-      propertyPath: m_Text
-      value: Server
-      objectReference: {fileID: 0}
+    - target: {fileID: 8203017550377328338, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
+      propertyPath: _netManager
+      value: 
+      objectReference: {fileID: 1624887576}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cecfb8b76ddaae4eb3a1e17e48c57c3, type: 3}
 --- !u!114 &5216855564031089522 stripped

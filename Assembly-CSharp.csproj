@@ -63,6 +63,7 @@
     <Compile Include="Assets\MirrorChat\Scripts\NetworkingManager.cs" />
     <Compile Include="Assets\MirrorChat\Scripts\ChatUser.cs" />
     <Compile Include="Assets\MirrorChat\Scripts\NetworkAuth.cs" />
+    <Compile Include="Assets\MirrorChat\Scripts\NetworkAuth_ClientSide.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

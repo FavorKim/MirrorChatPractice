@@ -120,7 +120,7 @@ public class ChattingUI : NetworkBehaviour
 
     public void OnValueChanged_ToggleBtn(string val)
     {
-        Btn_SendMessage.interactable = !string.IsNullOrEmpty(val);
+        Btn_SendMessage.interactable = !string.IsNullOrEmpty(Input_Message.text);
     }
 
     public void OnEndEdit_Sending()

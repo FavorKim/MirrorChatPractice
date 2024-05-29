@@ -35,6 +35,8 @@ public class LoginPopup : MonoBehaviour
     {
         SetDefaultNetworkAddress();
         Text_Error.gameObject.SetActive(false);
+        Btn_StartAsHostServer.interactable = false;
+        Btn_StartAsClient.interactable = false;
     }
 
     private void Start()
@@ -135,7 +137,7 @@ public class LoginPopup : MonoBehaviour
 
     public void OnValueChanged_ToggleBtn(string userName)
     {
-        bool isUserNameValid = !string.IsNullOrWhiteSpace(userName);
+        bool isUserNameValid = !string.IsNullOrEmpty(Input_UserName.text);
         Btn_StartAsHostServer.interactable = isUserNameValid;
         Btn_StartAsClient.interactable = isUserNameValid;
     }

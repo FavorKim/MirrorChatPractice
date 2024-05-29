@@ -3,14 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NetworkAuth : NetworkAuthenticator
+public partial class NetworkAuth : NetworkAuthenticator
 {
     // 서버
     readonly HashSet<NetworkConnection> _connectionPendingDisconnect = new HashSet<NetworkConnection>();
     internal static readonly HashSet<string> _playerNames = new HashSet<string>();
 
-    // 클라
-    [SerializeField] LoginPopup _loginPopup;
 
     [Header("ClientUserName")]
     public string _playerName;
@@ -73,7 +71,7 @@ public class NetworkAuth : NetworkAuthenticator
             // 전송
             conn.Send(authRespMsg);
 
-            // 받은사람 수령
+            // 받은 사람 수령
             ServerAccept(conn);
         }
         else    // 인증 실패 시
@@ -108,46 +106,6 @@ public class NetworkAuth : NetworkAuthenticator
     }
 
     #endregion
-    #region ClientSide
-    public void OnInputValueChanged_SetPlayerName(string userName)
-    {
-        _playerName = userName;
-        _loginPopup.SetUIOnAuthValueChanged();
-    }
-
-    public override void OnStartClient()
-    {
-        NetworkClient.RegisterHandler<AuthRespMsg>(OnAuthRespMsg, false);
-    }
-
-    public override void OnStopClient()
-    {
-        NetworkClient.UnregisterHandler<AuthRespMsg>();
-    }
-
-    // 클라에서 인증 요청 시 호출 됨
-    public override void OnClientAuthenticate()
-    {
-        NetworkClient.Send(new AuthReqMsg { authUserName = _playerName });
-    }
-
-    // 클라에서 인증 응답 시 호출 됨
-    public void OnAuthRespMsg(AuthRespMsg msg)
-    {
-        if(msg.code == 100)
-        {
-            Debug.Log($"Auth Response : {msg.code} : {msg.msg}");
-            this.ClientAccept();
-        }
-        else
-        {
-            Debug.Log($"Auth Response : {msg.code} {msg.msg}");
-            NetworkManager.singleton.StopHost();
-            _loginPopup.SetUIOnAuthError(msg.msg);
-        }
-    }
-
-
-    #endregion
+    
 
 }
